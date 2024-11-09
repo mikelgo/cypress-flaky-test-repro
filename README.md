@@ -1,5 +1,7 @@
 # Steps to reproduction 
 
+install dependencies `npm i`
+
 run the command `npx nx run e2e:open-cypress`
 and execture the tests in app.cy.ts.
 
