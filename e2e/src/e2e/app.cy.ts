@@ -3,11 +3,9 @@ import { getGreeting } from '../support/app.po';
 describe('e2e', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+  it('flaky', () => {
+    cy.get('button').click();
+    cy.get('p').should('contain', 'Saving...');
+    cy.get('p').should('contain', 'Saved');
   });
 });
